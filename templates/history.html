@@ -1,3 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add/Delete Personal Pets
+{% endblock %}
+
+{% block main %}
 <table style="width:100%">
   <tr>
     <th>Transaction (Stock Bought or Sold?)</th>
@@ -7,10 +14,15 @@
     <th>Date and Time for Transaction</th>
   </tr>
   <tr>
-    <td></td>
+    <td>{{row[""] }}</td>
     <td></td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
 </table>
+
+<form>
+    <a href="/command" class="btn btn-info btn-block">Back to Main</a>
+</form>
+{% endblock %}

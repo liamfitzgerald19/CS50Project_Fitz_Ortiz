@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete Personal Pets
+{% endblock %}
+
+{% block main %}
+<form action="/deletepet" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="Pet_Identifier" placeholder="Special Nickname for Pet" type="text" required/>
+        </div>
+        <button class="btn btn-primary" type="submit">Delete Pet</button>
+    </form>
+
+    <form>
+        <a href="/command" class="btn btn-info btn-block">Back to Main</a>
+    </form>
+{% endblock %}

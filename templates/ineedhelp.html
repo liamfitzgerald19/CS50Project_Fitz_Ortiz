@@ -1,0 +1,29 @@
+ {% extends "layout.html" %}
+
+{% block title %}
+    I Need Help
+{% endblock %}
+
+{% block main %}
+    <form action="/ineedhelp" method="post">
+        <h3><u>Asking for Pawssistance</u></h3>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="name" placeholder="Pet's Name" type="text"/>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="Pet_Identifier" placeholder="Nickname" type="text"/>
+        </div>
+        <p><i>Caretime Needed</i></p>
+        <div class="form-group">
+            <input class="form-control" name="Timestamp" placeholder="Date and Time for Care" type="datetime-local"/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="Friend" placeholder="Friend to help?" type="text"/>
+        </div>
+        <button class="btn btn-primary" type="submit">I Need Help</button>
+    </form>
+
+    <form>
+        <a href="/command" class="btn btn-info btn-block">Back to Main</a>
+    </form>
+{% endblock %}

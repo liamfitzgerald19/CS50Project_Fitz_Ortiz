@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Command
+{% endblock %}
+
+{% block main %}
+<form action="/command" method="post">
+  <div class="container">
+    <font face ="georgia"><h3><u><b>Weekly Pawdates!</b></u></h3></font>
+    <div class="row">
+      <!--<span class="border">-->
+      <div class="col-6">
+        <h5><b><u>My Personal Information</u></b></h5>
+        <div class="row">
+          <div class="col-3">
+          <ul>
+            <table>
+              <tr>
+                <th> Name </th>
+                <th> Nickname </th>
+                <th> Animal </th>
+                <th> Age </th>
+              </tr>
+              <tr></tr>
+                <td>jgjgjjg</td>
+              </tr>
+            </table>
+          </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3 col-sm-6">
+            <a href="/addpet" class="btn btn-info btn-block">Add Pet</a>
+          </div>
+          <div class="col-3 col-sm-6">
+            <a href="/deletepet" class="btn btn-info btn-block">Delete Pet</a>
+          </div>
+        </div>
+      </div>
+      <!--</span>-->
+      <!--<span class="border">-->
+      <div class="col-6">
+        <h5><b><u>Profiles of Friends in Need of Pet Care</u></b></h5>
+        <a href="/chance" class="btn btn-info btn-block">Chance, a pupper owned by Jung </a>
+        <a href="/lucy" class="btn btn-info btn-block">Lucy, an active doggo owned by Julie</a>
+        <a href="/fluffy" class="btn btn-info btn-block">Fluffy, a unique cat owned by Mike</a>
+      </div>
+      <!--</span>-->
+    </div>
+    <div class="row">
+      <!--<span class="border">-->
+      <div class="col-6">
+        <a href="/ineedhelp" class="btn btn-danger btn-block">I NEED HELP!</a>
+      </div>
+      <!--</span>-->
+      <!--<span class="border">-->
+      <div class="col-6">
+        <a href="/history" class="btn btn-info btn-block">My Track History</a>
+      </div>
+      <!--</span>-->
+    </div>
+  </div>
+</form>
+
+{% endblock %}

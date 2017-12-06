@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Personal Pets
+{% endblock %}
+
+{% block main %}
+    <form action="/addpet" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="Name" placeholder="Pet's Name" type="text" required/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="Age" placeholder="Age" type="number" required/>
+        </div>
+        <select name="Animal">
+          <option value="Dog">Dog</option>
+          <option value="Cat">Cat</option>
+        </select>
+        <div class="form-group">
+            <input class="form-control" name="Allergies" placeholder="Allergies" type="text" required/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="Favorite_Snack" placeholder="Favorite Snack" type="text" required/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="Additional_Notes" placeholder="Additional Notes" type="text" required/>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="Pet_Identifier" placeholder="Special Nickname for Pet" type="text" required/>
+        </div>
+        <p>** Disclaimer: Some animal owners have pets with the same name and age. This identifer makes your pet unique to you.</p>
+        <button class="btn btn-primary" type="submit">Add Pet</button>
+    </form>
+
+    <form>
+        <a href="/command" class="btn btn-info btn-block">Back to Main</a>
+    </form>
+{% endblock %}
