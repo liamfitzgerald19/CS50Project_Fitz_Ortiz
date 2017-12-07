@@ -12,21 +12,24 @@
       <!--<span class="border">-->
       <div class="col-6">
         <h5><b><u>My Personal Information</u></b></h5>
-        <div class="row">
-          <div class="col-3">
-          <ul>
-            <table>
-              <tr>
-                <th> Name </th>
-                <th> Nickname </th>
-                <th> Animal </th>
-                <th> Age </th>
-              </tr>
-              <tr></tr>
-                <td>jgjgjjg</td>
-              </tr>
+          <div class="row">
+          <div class="col-3 col-sm-12">
+            <table style="width:100%">
+            <tr>
+              <th> Pet's Name </th>
+              <th> Age </th>
+              <th> Allergies </th>
+              <th> Favorite Snack </th>
+            </tr>
+            {% for personal in personals %}
+            <tr>
+              <td> {{personal.Name}} </td>
+              <td> {{personal.Age}} </td>
+              <td> {{personal.Allergies}} </td>
+              <td> {{personal.Favorite_Snack}} </td>
+            </tr>
+            {% endfor %}
             </table>
-          </ul>
           </div>
         </div>
         <div class="row">
@@ -42,9 +45,27 @@
       <!--<span class="border">-->
       <div class="col-6">
         <h5><b><u>Profiles of Friends in Need of Pet Care</u></b></h5>
-        <a href="/chance" class="btn btn-info btn-block">Chance, a pupper owned by Jung </a>
-        <a href="/lucy" class="btn btn-info btn-block">Lucy, an active doggo owned by Julie</a>
-        <a href="/fluffy" class="btn btn-info btn-block">Fluffy, a unique cat owned by Mike</a>
+        <div class="row">
+          <div class="col-3 col-sm-12">
+            <table style="width:100%">
+            <tr>
+              <th> Pet's Name </th>
+              <th> Owner's Name </th>
+              <th> Directions </th>
+              <th> Points </th>
+            </tr>
+            {% for row in rows %}
+            <tr>
+              <td> {{row.Name}} </td>
+              <td> {{row.UsersName}} </td>
+              <td> {{row.Directions}} </td>
+              <td> {{row.Points}} </td>
+            </tr>
+            {% endfor %}
+            </table>
+
+          </div>
+        </div>
       </div>
       <!--</span>-->
     </div>

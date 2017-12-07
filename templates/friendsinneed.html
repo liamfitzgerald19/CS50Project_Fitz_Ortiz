@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Friends in Need
+{% endblock %}
+
+{% block main %}
+<table style="width:100%">
+    <tr>
+        <th> Pet's Name </th>
+        <th> Owner's Name </th>
+        <th> Directions </th>
+        <th> Points </th>
+    </tr>
+</table>
+
+    {% for Pet in Pets %}
+
+    {% endfor %}
+    <form>
+        <a href="/command" class="btn btn-info btn-block">Back to Main</a>
+    </form>
+{% endblock %}
